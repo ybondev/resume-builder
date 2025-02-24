@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;500;700&display=swap%27");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Saira", sans-serif;
+}
+
+main {
+  padding: 4rem
+}
+
+main .txt-title {
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+/* FORM */
+.form {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date-start,
+.date-end {
+  width: 100%;
+}
+
+.txt-personal,
+.txt-experience,
+.tx-education {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* DISPLAY INFORMATIION */
+.resume-preview {
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  word-wrap: break-word; /* Allows long words to be broken and wrap onto the next line */
+  word-break: break-all; /* Breaks words at arbitrary points if necessary */
+  white-space: normal; /* Allows text to wrap normally */
+}
+
+.resume-preview p {
+  font-size: 14px;
+}
+
+.resume-experience,
+.resume-education,
+.resume-skills {
+  border-top: 1px solid #DEE2E6;
+  padding-top: 1rem;
+}
+
+/* OVERRIDE CSS */
+.form-control:focus {
+  border-color: #DEE2E6;
+  box-shadow: none
+}
+
+.nav-tabs .nav-link {
+  color: #495057;
+  background: #DEE2E6;
+  border-radius: 2px;
+}
+
+.nav-tabs .nav-link.active {
+  color: #495057;
+}
+
+textarea {
+  height: 100px !important;
+}
