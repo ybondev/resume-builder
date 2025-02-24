@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
+import Image from "next/image";
 
 const formatDate = (dateString) => {
   if (!dateString) return "";
@@ -72,6 +73,20 @@ const DisplayInformation = ({ formData }) => {
 
         {/* Summary - Only show if it exists */}
         {formData.summary?.trim() && <p>{formData.summary}</p>}
+
+        {/* Uploaded Picture */}
+        <div className="resume-picture">
+          {/* Display Profile Image if Available */}
+          {formData.profileImage && (
+            <Image
+              src={formData.profileImage}
+              alt="Profile"
+              className="img-fluid"
+              width={170}
+              height={170}
+            />
+          )}
+        </div>
 
         {/* Experience Section */}
         {formData.experience?.some(
@@ -215,6 +230,14 @@ const DisplayInformation = ({ formData }) => {
             </div>
           </div>
         )}
+
+        {/* HEREBY */}
+        <div className="resume-hereby">
+          <div className="txt text-center ">
+            Hereby I declare that the information provided above is true to the
+            best of my knowledge.
+          </div>
+        </div>
       </div>
 
       {/* Button to Generate PDF */}

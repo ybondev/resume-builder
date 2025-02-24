@@ -98,7 +98,7 @@ const FormEducation = ({ formData, setFormData }) => {
 
       <div className="form-floating mt-3 d-flex justify-content-end">
         <button className="btn btn-primary" onClick={addForm}>
-          <span>Add Experience</span>
+          <span>Add Education</span>
         </button>
       </div>
     </div>

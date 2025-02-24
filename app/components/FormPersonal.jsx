@@ -8,6 +8,21 @@ const FormPersonal = ({ formData, setFormData }) => {
       [name]: value,
     });
   };
+
+  // Handle Image Upload
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData({
+          ...formData,
+          profileImage: reader.result, // Save base64 image
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
   return (
     <div className="tab-pane fade show active" id="personal">
       <div className="txt-personal my-3">personal information</div>
@@ -69,6 +84,18 @@ const FormPersonal = ({ formData, setFormData }) => {
           onChange={handleChange}
         ></textarea>
         <label htmlFor="floatingInput">Summary</label>
+      </div>
+      <div className="form-floating mt-3">
+        <input
+          type="file"
+          accept="image/*"
+          name="file"
+          id="floatingImage"
+          className="form-control"
+          placeholder="Upload your Picture"
+          onChange={handleImageUpload}
+        ></input>
+        <label htmlFor="floatingImage">Upload your Picture</label>
       </div>
     </div>
   );

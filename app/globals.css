@@ -39,6 +39,11 @@ main .txt-title {
   text-transform: capitalize;
 }
 
+input[type="file"] {
+  padding-top: 2.2em !important;
+  height: 60px !important;
+}
+
 /* DISPLAY INFORMATIION */
 .resume-preview {
   padding: 3rem;
@@ -48,6 +53,7 @@ main .txt-title {
   word-wrap: break-word; /* Allows long words to be broken and wrap onto the next line */
   word-break: break-all; /* Breaks words at arbitrary points if necessary */
   white-space: normal; /* Allows text to wrap normally */
+  position: relative;
 }
 
 .resume-preview p {
@@ -56,9 +62,20 @@ main .txt-title {
 
 .resume-experience,
 .resume-education,
-.resume-skills {
+.resume-skills,
+.resume-certificates {
   border-top: 1px solid #DEE2E6;
   padding-top: 1rem;
+}
+
+.resume-picture {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.resume-hereby {
+  font-size: .9em;
 }
 
 /* OVERRIDE CSS */
@@ -79,4 +96,15 @@ main .txt-title {
 
 textarea {
   height: 100px !important;
+}
+
+@media screen and (max-width: 768px) {
+  main .col-md-7 {
+    padding: 0rem;
+  }
+
+  h1.txt-title {
+    font-size: 1.5em;
+  }
+  
 }
