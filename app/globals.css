@@ -91,6 +91,11 @@ input[type="file"] {
 
 .resume-preview .txt-item {
   font-weight: 600;
+  margin-bottom: 0;
+}
+
+.resume-preview .txt-p {
+  margin-bottom: 0;
 }
 
 /* OVERRIDE CSS */

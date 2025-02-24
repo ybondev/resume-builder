@@ -72,7 +72,9 @@ const DisplayInformation = ({ formData }) => {
         )}
 
         {/* Summary - Only show if it exists */}
-        {formData.summary?.trim() && <p>{formData.summary}</p>}
+        {formData.summary?.trim() && (
+          <p className="txt-p mb-3">{formData.summary}</p>
+        )}
 
         {/* Uploaded Picture */}
         <div className="resume-picture">
@@ -107,15 +109,21 @@ const DisplayInformation = ({ formData }) => {
                   exp.endDate?.trim() ||
                   exp.jobDescription?.trim()) && (
                   <div key={index} className="resume-experience-item">
-                    {exp.company?.trim() && <p className="txt-item">{exp.company}</p>}
-                    {exp.position?.trim() && <p>{exp.position}</p>}
+                    {exp.company?.trim() && (
+                      <p className="txt-item">{exp.company}</p>
+                    )}
+                    {exp.position?.trim() && (
+                      <p className="txt-p">{exp.position}</p>
+                    )}
                     {(exp.startDate?.trim() || exp.endDate?.trim()) && (
-                      <p>
+                      <p className="txt-p">
                         {formatDate(exp.startDate)} -{" "}
                         {formatDate(exp.endDate) || "Present"}
                       </p>
                     )}
-                    {exp.jobDescription?.trim() && <p>{exp.jobDescription}</p>}
+                    {exp.jobDescription?.trim() && (
+                      <p className="txt-p my-3">{exp.jobDescription}</p>
+                    )}
                   </div>
                 )
             )}
@@ -139,10 +147,14 @@ const DisplayInformation = ({ formData }) => {
                   edu.startDate?.trim() ||
                   edu.endDate?.trim()) && (
                   <div key={index} className="resume-education-item">
-                    {edu.school?.trim() && <p>{edu.school}</p>}
-                    {edu.degree?.trim() && <p>{edu.degree}</p>}
+                    {edu.school?.trim() && (
+                      <p className="txt-item">{edu.school}</p>
+                    )}
+                    {edu.degree?.trim() && (
+                      <p className="txt-p txt">{edu.degree}</p>
+                    )}
                     {(edu.startDate?.trim() || edu.endDate?.trim()) && (
-                      <p>
+                      <p className="txt-p mb-3">
                         {formatDate(edu.startDate)} -{" "}
                         {formatDate(edu.endDate) || "Present"}
                       </p>
@@ -162,7 +174,7 @@ const DisplayInformation = ({ formData }) => {
                 (skill, index) =>
                   skill.skill?.trim() && (
                     <li key={index}>
-                      <span>{skill.skill}</span>
+                      <p className="txt-p">{skill.skill}</p>
                     </li>
                   )
               )}
@@ -186,12 +198,14 @@ const DisplayInformation = ({ formData }) => {
                   cert.date?.trim()) && (
                   <div key={index} className="resume-certificates-item">
                     {cert.certificate?.trim() && (
-                      <strong>{cert.certificate}</strong>
+                      <p className="txt-item">{cert.certificate}</p>
                     )}
                     {cert.issuingOrganization?.trim() && (
-                      <p>{cert.issuingOrganization}</p>
+                      <p className="txt-p">{cert.issuingOrganization}</p>
                     )}
-                    {cert.date?.trim() && <p>{formatDate(cert.date)}</p>}
+                    {cert.date?.trim() && (
+                      <p className="txt-p mb-3">{formatDate(cert.date)}</p>
+                    )}
                   </div>
                 )
             )}
