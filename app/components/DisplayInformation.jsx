@@ -107,7 +107,7 @@ const DisplayInformation = ({ formData }) => {
                   exp.endDate?.trim() ||
                   exp.jobDescription?.trim()) && (
                   <div key={index} className="resume-experience-item">
-                    {exp.company?.trim() && <strong>{exp.company}</strong>}
+                    {exp.company?.trim() && <p className="txt-item">{exp.company}</p>}
                     {exp.position?.trim() && <p>{exp.position}</p>}
                     {(exp.startDate?.trim() || exp.endDate?.trim()) && (
                       <p>
@@ -139,7 +139,7 @@ const DisplayInformation = ({ formData }) => {
                   edu.startDate?.trim() ||
                   edu.endDate?.trim()) && (
                   <div key={index} className="resume-education-item">
-                    {edu.school?.trim() && <strong>{edu.school}</strong>}
+                    {edu.school?.trim() && <p>{edu.school}</p>}
                     {edu.degree?.trim() && <p>{edu.degree}</p>}
                     {(edu.startDate?.trim() || edu.endDate?.trim()) && (
                       <p>
