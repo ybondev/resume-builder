@@ -19,6 +19,14 @@ main .txt-title {
   text-transform: capitalize;
 }
 
+.link-href {
+  color: #121212;
+}
+
+.link-href:hover {
+  color: #495057;
+}
+
 /* FORM */
 .form {
   padding: 1rem;
@@ -108,6 +116,7 @@ input[type="file"] {
   color: #495057;
   background: #DEE2E6;
   border-radius: 2px;
+  padding: 5px;
 }
 
 .nav-tabs .nav-link.active {
