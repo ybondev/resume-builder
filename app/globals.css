@@ -32,6 +32,7 @@ main .txt-title {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 
 .date-start,
@@ -63,6 +64,7 @@ input[type="file"] {
   word-break: break-all; /* Breaks words at arbitrary points if necessary */
   white-space: normal; /* Allows text to wrap normally */
   position: relative;
+  height: 100%;
 }
 
 .resume-preview p {
@@ -84,7 +86,9 @@ input[type="file"] {
 }
 
 .resume-hereby {
-  font-size: .9em;
+  position: absolute;
+  bottom: 20px;
+  font-size: .8em;
   padding: 2em;
 }
 

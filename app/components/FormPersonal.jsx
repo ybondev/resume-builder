@@ -94,8 +94,9 @@ const FormPersonal = ({ formData, setFormData }) => {
           className="form-control"
           placeholder="Upload your Picture"
           onChange={handleImageUpload}
+          disabled
         ></input>
-        <label htmlFor="floatingImage">Upload your Picture</label>
+        <label htmlFor="floatingImage">Not yet avaialable!</label>
       </div>
     </div>
   );
