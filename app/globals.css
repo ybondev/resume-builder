@@ -10,12 +10,12 @@
 }
 
 main {
-  padding: 4rem
+  padding: 3rem
 }
 
 main .txt-title {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5em;
   text-transform: capitalize;
 }
 
@@ -87,9 +87,12 @@ input[type="file"] {
 
 .resume-hereby {
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: .8em;
   padding: 2em;
+  width: 100%;
 }
 
 .resume-preview h3 {
@@ -139,5 +142,6 @@ textarea {
   h1.txt-title {
     font-size: 1.5em;
   }
+  
   
 }

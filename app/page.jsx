@@ -52,8 +52,22 @@ const page = () => {
     <>
       <main>
         <div className="container">
-          <h1 className="txt-title">simple resume builder</h1>
-          <span>Create your professional resume in just a few minutes</span>
+          <div className="row">
+            <div className="col-md-8 p-0">
+              <h1 className="txt-title">
+                BuildMyCV – Create Your Professional Resume in Minutes!
+              </h1>
+            </div>
+            <div className="col-md-6 p-0">
+              <span>
+                BuildMyCV is your go-to online resume builder, designed to help
+                you craft a polished, job-winning CV in just a few clicks.
+                Whether you're a fresh graduate, a career switcher, or an
+                experienced professional, our easy-to-use platform ensures your
+                resume stands out.
+              </span>
+            </div>
+          </div>
           <div className="row gy-3 mt-3">
             <div className="col-md-5 form">
               <ul className="nav nav-tabs" id="myTab" role="tablist">
